@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="refresh">
+        <title>pseudo classes</title>
+        <style>
+            input[type="number"]:out-of-range{
+                border: 2px solid red;
+            }
+            input[type="number"]:in-range{
+                border: 2px solid green;
+            }
+            input[type="email"]:invalid{
+                border: 2px solid red;
+            }
+            p::first-line{
+                text-decoration: underline;
+            }
+            p::first-letter{
+                font-size: 70px;
+                color: green;
+            }
+            p::before{content: "KLU";}
+            p::after{content: "KLU";}
+            p::selection{background-color: yellow;}
+            li::marker{
+                color: orange;
+            }
+            .c1{
+                list-style-type: none;
+            }
+            .c1 li::before{
+                content: "\2713";
+                color: green;
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+       <input type="number" style="width:500px" " placeholder="enter age" min="18" max="65">
+       <br><br>
+       <input type="email" placeholder="email address">
+       <br><br>
+       <p>
+        TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest
+        TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest
+        TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest
+       </p>
+       <ul>
+        <li>KLU</li>
+        <li>KLU</li>
+        <li>KLU</li>
+       </ul>
+
+       <ul class="c1">
+        <li>KLU</li>
+        <li>KLU</li>
+        <li>KLU</li>
+       </ul>
+    </body>
+</html>
